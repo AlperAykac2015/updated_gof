@@ -24,4 +24,13 @@ public class Product {
   public String getPart2() {
     return part2;
   }
+
+  @Override
+  public String toString() {
+    final StringBuilder sb = new StringBuilder("Product{");
+    sb.append("part1='").append(part1).append('\'');
+    sb.append(", part2='").append(part2).append('\'');
+    sb.append('}');
+    return sb.toString();
+  }
 }

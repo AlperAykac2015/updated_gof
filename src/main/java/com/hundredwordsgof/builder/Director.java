@@ -13,7 +13,12 @@ public class Director {
     this.builder = builder;
   }
 
-  public void construct() {
+  public void construct2() {
     builder.createProduct().buildPart1("part1").buildPart2("part2");
   }
+
+  public Product construct() {
+    return builder.createProduct().getResult();
+  }
+
 }

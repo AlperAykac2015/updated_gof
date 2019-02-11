@@ -13,6 +13,7 @@ public class ConcreteBuilder extends Builder {
     return this;
   }
 
+  @Override
   public Builder buildPart1(String part) {
     product.setPart1(part);
     return this;
@@ -25,5 +26,13 @@ public class ConcreteBuilder extends Builder {
 
   public Product getResult() {
     return product;
+  }
+
+  @Override
+  public String toString() {
+    final StringBuilder sb = new StringBuilder("ConcreteBuilder{");
+    sb.append("product=").append(product);
+    sb.append('}');
+    return sb.toString();
   }
 }
